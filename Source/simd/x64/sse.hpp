@@ -123,7 +123,7 @@ template <> struct simd<double> : public simd_base<double>
 
     friend ALWAYS_INLINE bool simd_all_true(const mask_t cond)
     {
-        int mask = _mm128_movemask_pd(cond);
+        int mask = _mm_movemask_pd(cond);
         return mask == 0 ? true : false;
     }
 
@@ -223,7 +223,7 @@ template <> struct simd<float> : public simd_base<float>
 
     friend ALWAYS_INLINE bool simd_all_true(const mask_t cond)
     {
-        int mask = _mm128_movemask_ps(cond);
+        int mask = _mm_movemask_ps(cond);
         return mask == 0 ? true : false;
     }
 
