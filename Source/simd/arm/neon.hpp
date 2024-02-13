@@ -170,6 +170,8 @@ template <> struct simd<float> : public simd_base<float>
         return vmaxq_f32(a, b);
     }
 
+    //
+
     friend ALWAYS_INLINE simd simd_sqrt(const simd &a) { return vsqrtq_f32(a); }
 };
 
