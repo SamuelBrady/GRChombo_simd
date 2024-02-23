@@ -200,6 +200,7 @@ template <> struct simd<float> : public simd_base<float>
     }
 
     friend ALWAYS_INLINE bool simd_all_false(const mask_t cond, const simd &b)
+
     {
         int mask = _mm256_movemask_ps(cond);
         return mask == 0 ? true : false;

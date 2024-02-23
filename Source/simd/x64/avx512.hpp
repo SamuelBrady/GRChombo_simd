@@ -203,7 +203,7 @@ template <> struct simd<float> : public simd_base<float>
     {
         return _mm512_max_ps(a, b);
     }
-
+    
     friend ALWAYS_INLINE bool simd_all_false(const mask_t cond, const simd &b)
     {
         int mask = static_cast<int>(cond);

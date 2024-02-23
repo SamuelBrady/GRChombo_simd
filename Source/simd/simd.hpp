@@ -180,6 +180,11 @@ template <typename t> ALWAYS_INLINE bool simd_all_false(const bool cond, const t
     return !cond;
 }
 
+template <typename t> ALWAYS_INLINE bool simd_all_false(const bool cond)
+{
+    return !cond;
+}
+
 //<-- End: Defining the simd specific calls for non-simd datatypes.
 
 #include "simdify.hpp"
